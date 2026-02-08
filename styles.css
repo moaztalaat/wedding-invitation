@@ -67,4 +67,86 @@ h1 {
   margin-top: 20px;
   font-size: 14px;
   color: #555;
+}body {
+  margin: 0;
+  font-family: "Georgia", serif;
+  background: linear-gradient(135deg, #f6f1eb, #e8ded1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  background: #ffffff;
+  width: 90%;
+  max-width: 420px;
+  padding: 30px 25px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.basmala {
+  font-size: 14px;
+  color: #7a6a58;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 10px 0;
+  color: #2f2f2f;
+}
+
+.names {
+  font-size: 20px;
+  color: #8b5e3c;
+  margin-bottom: 15px;
+}
+
+#text {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.details p {
+  font-size: 14px;
+  margin: 6px 0;
+  color: #444;
+}
+
+.qr {
+  width: 160px;
+  margin: 20px auto;
+}
+
+.footer {
+  font-size: 13px;
+  color: #666;
+  margin-top: 10px;
+}
+
+#langBtn {
+  background: none;
+  border: 1px solid #8b5e3c;
+  color: #8b5e3c;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+#langBtn:hover {
+  background: #8b5e3c;
+  color: #fff;
+}
+
+/* Countdown */
+.countdown {
+  margin: 20px 0;
+  font-size: 16px;
+  color: #8b5e3c;
+  font-weight: bold;
 }
