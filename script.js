@@ -18,4 +18,24 @@ function toggleLang() {
   }
 
   isArabic = !isArabic;
-}
+}const weddingDate = new Date("April 8, 2026 20:00:00").getTime();
+
+const countdownEl = document.getElementById("countdown");
+
+setInterval(() => {
+  const now = new Date().getTime();
+  const diff = weddingDate - now;
+
+  if (diff <= 0) {
+    countdownEl.innerHTML = "🎉 Today is the Wedding Day!";
+    return;
+  }
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
+
+  countdownEl.innerHTML =
+    `⏳ ${days} days : ${hours} hours : ${minutes} minutes : ${seconds} seconds`;
+}, 1000);
