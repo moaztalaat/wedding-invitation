@@ -1,125 +1,135 @@
 /* =========================
    Base
 ========================= */
-body{
-  margin:0;
-  font-family:"Georgia", serif;
-  background:#faf8f4; /* أوف وايت */
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:30px 14px;
-  box-sizing:border-box;
+body {
+  margin: 0;
+  font-family: "Georgia", serif;
+  background: #faf8f4;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 14px;
+  box-sizing: border-box;
 }
 
 /* =========================
    Language Button
 ========================= */
-#langBtn{
-  position:fixed;
-  top:18px;
-  right:18px;
-  padding:8px 14px;
-  border-radius:999px;
-  border:1px solid #d7c6ff;
-  background:#ffffff;
-  color:#5e3b8c;
-  cursor:pointer;
-  font-size:14px;
+#langBtn {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid #d7c6ff;
+  background: #ffffff;
+  color: #5e3b8c;
+  cursor: pointer;
+  font-size: 14px;
 }
-#langBtn:hover{ background:#f3edff; }
 
-.card{
-  width:90%;
-  max-width:460px;
-  padding:40px 30px;
-  border-radius:18px;
-  text-align:center;
+#langBtn:hover {
+  background: #f3edff;
+}
 
-  background-color:#ffffff;
+/* =========================
+   Card (White + CLEAR Purple Pattern)
+========================= */
+.card {
+  width: 90%;
+  max-width: 460px;
+  padding: 40px 30px;
+  border-radius: 18px;
+  text-align: center;
 
- background-image:
-  radial-gradient(circle, rgba(155,100,255,0.35) 2px, transparent 2.5px),
-  radial-gradient(circle, rgba(155,100,255,0.25) 2px, transparent 2.5px);
+  /* نقش بربل واضح جدًا */
+  background:
+    radial-gradient(circle, rgba(155,100,255,0.45) 2px, transparent 2.6px),
+    radial-gradient(circle, rgba(155,100,255,0.30) 2px, transparent 2.6px),
+    #ffffff;
 
-background-size:18px 18px, 30px 30px;
-  background-size:22px 22px, 36px 36px;
-  background-position:0 0, 10px 14px;
+  background-size: 18px 18px, 32px 32px;
+  background-position: 0 0, 10px 14px;
 
-  border:1px solid #eee6ff;
-  box-shadow:0 18px 50px rgba(94,59,140,.12);
-
+  border: 1px solid #eee6ff;
+  box-shadow: 0 18px 50px rgba(94,59,140,.12);
 }
 
 /* =========================
    Typography
 ========================= */
-.basmala{
-  font-size:15px;
-  margin-bottom:18px;
-  color:#6a5a7a;
+.basmala {
+  font-size: 15px;
+  margin-bottom: 18px;
+  color: #6a5a7a;
 }
-h1{
-  font-size:28px;
-  margin:8px 0 10px;
-  color:#2f2f2f;
+
+h1 {
+  font-size: 28px;
+  margin: 8px 0 10px;
+  color: #2f2f2f;
 }
-.names{
-  font-size:22px;
-  margin:14px 0 16px;
-  font-weight:700;
-  color:#5e3b8c;
+
+.names {
+  font-size: 22px;
+  margin: 14px 0 16px;
+  font-weight: 700;
+  color: #5e3b8c;
 }
-#text{
-  margin:18px 0 22px;
-  font-size:16px;
-  color:#444;
-  line-height:1.8;
+
+#text {
+  margin: 18px 0 22px;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.8;
 }
-.details p{
-  margin:6px 0;
-  font-size:15px;
-  color:#3f3f3f;
+
+.details p {
+  margin: 6px 0;
+  font-size: 15px;
+  color: #3f3f3f;
 }
 
 /* =========================
    Countdown
 ========================= */
-@keyframes pulse{
-  0%{transform:scale(1);}
-  50%{transform:scale(1.03);}
-  100%{transform:scale(1);}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
 }
-.countdown{
-  margin-top:14px;
-  font-size:16px;
-  font-weight:700;
-  color:#5e3b8c;
-  animation:pulse 1.2s infinite;
+
+.countdown {
+  margin-top: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #5e3b8c;
+  animation: pulse 1.2s infinite;
 }
 
 /* =========================
    QR + Footer
 ========================= */
-.qr{
-  width:160px;
-  margin:22px auto;
-  display:block;
-  border-radius:12px;
-  box-shadow:0 10px 22px rgba(0,0,0,.08);
+.qr {
+  width: 160px;
+  margin: 22px auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 22px rgba(0,0,0,.08);
 }
-.footer{
-  margin-top:18px;
-  font-size:14px;
-  color:#666;
+
+.footer {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #666;
 }
 
 /* =========================
    Mobile
 ========================= */
-@media (max-width:420px){
-  .card{padding:32px 20px;}
-  h1{font-size:24px;}
-  .names{font-size:20px;}
+@media (max-width: 420px) {
+  .card { padding: 32px 20px; }
+  h1 { font-size: 24px; }
+  .names { font-size: 20px; }
 }
