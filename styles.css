@@ -177,4 +177,12 @@ h1 {
         #e9dcff
     );
     min-height: 100vh;
+}.container {
+    background: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(94, 59, 140, 0.12);
+    border: 1px solid #e6d9ff;
 }
