@@ -34,7 +34,7 @@ body {
 }
 
 /* =========================
-   Card (White + CLEAR Purple Pattern)
+   Card
 ========================= */
 .card {
   position: relative;
@@ -49,39 +49,42 @@ body {
   overflow: hidden;
 }
 
-/* زخرفة ورد خفيفة في الركن العلوي اليمين */
+/* =========================
+   Purple Floral Corners
+========================= */
+
+/* Top Right Floral Glow */
 .card::before {
   content: "";
   position: absolute;
-  top: -60px;
-  right: -60px;
-  width: 220px;
-  height: 220px;
+  top: -80px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
   background:
-    radial-gradient(circle at 30% 30%, rgba(155,100,255,0.25), transparent 60%),
-    radial-gradient(circle at 70% 60%, rgba(155,100,255,0.18), transparent 70%),
-    radial-gradient(circle at 50% 50%, rgba(155,100,255,0.12), transparent 75%);
+    radial-gradient(circle at 40% 40%, rgba(155,100,255,0.35), transparent 60%),
+    radial-gradient(circle at 70% 70%, rgba(155,100,255,0.25), transparent 65%),
+    radial-gradient(circle at 50% 50%, rgba(155,100,255,0.18), transparent 75%);
   border-radius: 50%;
-  filter: blur(2px);
+  filter: blur(6px);
   pointer-events: none;
 }
 
-/* زخرفة ورد في الركن السفلي الشمال */
+/* Bottom Left Floral Glow */
 .card::after {
   content: "";
   position: absolute;
-  bottom: -70px;
-  left: -70px;
-  width: 240px;
-  height: 240px;
+  bottom: -90px;
+  left: -90px;
+  width: 280px;
+  height: 280px;
   background:
-    radial-gradient(circle at 60% 40%, rgba(155,100,255,0.22), transparent 60%),
-    radial-gradient(circle at 40% 70%, rgba(155,100,255,0.15), transparent 70%),
-    radial-gradient(circle at 50% 50%, rgba(155,100,255,0.10), transparent 75%);
+    radial-gradient(circle at 60% 40%, rgba(155,100,255,0.32), transparent 60%),
+    radial-gradient(circle at 30% 70%, rgba(155,100,255,0.22), transparent 70%),
+    radial-gradient(circle at 50% 50%, rgba(155,100,255,0.16), transparent 80%);
   border-radius: 50%;
-  filter: blur(3px);
+  filter: blur(8px);
   pointer-events: none;
-}
 }
 
 /* =========================
