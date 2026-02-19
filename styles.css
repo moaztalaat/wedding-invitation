@@ -4,7 +4,7 @@
 body {
   margin: 0;
   font-family: "Georgia", serif;
-  background: #faf8f4; /* off-white */
+  background: #faf8f4;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -27,6 +27,7 @@ body {
   color: #5e3b8c;
   cursor: pointer;
   font-size: 14px;
+  transition: 0.2s ease;
 }
 
 #langBtn:hover {
@@ -43,47 +44,48 @@ body {
   padding: 40px 30px;
   border-radius: 18px;
   text-align: center;
-
   background: #ffffff;
   border: 1px solid #eee6ff;
-  box-shadow: 0 18px 50px rgba(94, 59, 140, 0.12);
+  box-shadow: 0 18px 50px rgba(94,59,140,.12);
   overflow: hidden;
 }
 
 /* =========================
-   Floral Corner Touches (Purple)
-   (soft “floral” blobs like invitation paper)
+   Soft Purple Floral Corners
 ========================= */
-.card::before,
+
+/* Top Right */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -140px;
+  right: -140px;
+  width: 360px;
+  height: 360px;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(155,100,255,0.16), transparent 65%),
+    radial-gradient(circle at 65% 60%, rgba(155,100,255,0.10), transparent 75%);
+  border-radius: 50%;
+  filter: blur(35px);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* Bottom Left */
 .card::after {
   content: "";
   position: absolute;
-  width: 280px;
-  height: 280px;
+  bottom: -160px;
+  left: -160px;
+  width: 400px;
+  height: 400px;
+  background:
+    radial-gradient(circle at 60% 40%, rgba(155,100,255,0.14), transparent 65%),
+    radial-gradient(circle at 35% 70%, rgba(155,100,255,0.08), transparent 75%);
   border-radius: 50%;
+  filter: blur(45px);
+  opacity: 0.7;
   pointer-events: none;
-  filter: blur(10px);
-  opacity: 0.9;
-}
-
-/* top-right */
-.card::before {
-  top: -130px;
-  right: -130px;
-  background:
-    radial-gradient(circle at 35% 35%, rgba(155,100,255,0.35), transparent 60%),
-    radial-gradient(circle at 70% 55%, rgba(155,100,255,0.22), transparent 70%),
-    radial-gradient(circle at 45% 75%, rgba(155,100,255,0.16), transparent 75%);
-}
-
-/* bottom-left */
-.card::after {
-  bottom: -140px;
-  left: -140px;
-  background:
-    radial-gradient(circle at 60% 40%, rgba(155,100,255,0.32), transparent 60%),
-    radial-gradient(circle at 35% 70%, rgba(155,100,255,0.20), transparent 70%),
-    radial-gradient(circle at 55% 55%, rgba(155,100,255,0.14), transparent 78%);
 }
 
 /* =========================
@@ -146,7 +148,7 @@ h1 {
   margin: 22px auto;
   display: block;
   border-radius: 12px;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 22px rgba(0,0,0,.08);
 }
 
 .footer {
