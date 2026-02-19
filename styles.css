@@ -1,8 +1,10 @@
-/* ========= Base ========= */
+/* =========================
+   Base
+========================= */
 body {
   margin: 0;
   font-family: "Georgia", serif;
-  background: linear-gradient(135deg, #f8f6f2 0%, #efe8ff 55%, #ffffff 100%);
+  background: #faf8f4; /* أوف وايت */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +13,9 @@ body {
   box-sizing: border-box;
 }
 
-/* ========= Language Button ========= */
+/* =========================
+   Language Button
+========================= */
 #langBtn {
   position: fixed;
   top: 18px;
@@ -19,21 +23,20 @@ body {
   padding: 8px 14px;
   border-radius: 999px;
   border: 1px solid #d7c6ff;
-  background: rgba(255, 255, 255, 0.75);
+  background: #ffffff;
   color: #5e3b8c;
   cursor: pointer;
   font-size: 14px;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  transition: transform 0.15s ease, background 0.15s ease;
+  transition: 0.2s ease;
 }
 
 #langBtn:hover {
-  transform: translateY(-1px);
-  background: rgba(255, 255, 255, 0.9);
+  background: #f3edff;
 }
 
-/* ========= Main Card ========= */
+/* =========================
+   Main Card
+========================= */
 .card {
   background: #ffffff;
   width: 90%;
@@ -42,21 +45,30 @@ body {
   border-radius: 18px;
   text-align: center;
   position: relative;
-  z-index: 1;
-  box-shadow: 0 20px 50px rgba(94, 59, 140, 0.12);
-}.card::before {
+  overflow: hidden;
+  border: 1px solid #efe7ff;
+  box-shadow: 0 18px 50px rgba(94, 59, 140, 0.12);
+}
+
+/* Purple subtle pattern */
+.card::before {
   content: "";
   position: absolute;
-  inset: -40px;
-  background: radial-gradient(circle at center, rgba(155, 100, 255, 0.25), transparent 70%);
-  z-index: -1;
-  border-radius: 30px;
-}}
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 25% 30%, rgba(155, 100, 255, 0.10) 2px, transparent 2px),
+    radial-gradient(circle at 75% 70%, rgba(155, 100, 255, 0.10) 2px, transparent 2px);
+  background-size: 120px 120px;
+  opacity: 0.6;
+  pointer-events: none;
+}
 
-/* ========= Typography ========= */
+/* =========================
+   Typography
+========================= */
 .basmala {
   font-size: 15px;
-  margin: 0 0 18px;
+  margin-bottom: 18px;
   color: #6a5a7a;
 }
 
@@ -64,21 +76,20 @@ h1 {
   font-size: 28px;
   margin: 8px 0 10px;
   color: #2f2f2f;
-  letter-spacing: 0.2px;
 }
 
 .names {
   font-size: 22px;
   margin: 14px 0 16px;
   font-weight: 700;
-  color: #5e3b8c;
+  color: #5e3b8c; /* بنفسجي */
 }
 
 #text {
   margin: 18px 0 22px;
   font-size: 16px;
   color: #444;
-  line-height: 1.85;
+  line-height: 1.8;
 }
 
 .details p {
@@ -87,27 +98,13 @@ h1 {
   color: #3f3f3f;
 }
 
-/* ========= QR ========= */
-.qr {
-  width: 160px;
-  margin: 22px auto;
-  display: block;
-  border-radius: 12px;
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
-}
-
-/* ========= Footer ========= */
-.footer {
-  margin-top: 18px;
-  font-size: 14px;
-  color: #666;
-}
-
-/* ========= Countdown ========= */
+/* =========================
+   Countdown
+========================= */
 @keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.03); opacity: 0.88; }
-  100% { transform: scale(1); opacity: 1; }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
 }
 
 .countdown {
@@ -118,13 +115,35 @@ h1 {
   animation: pulse 1.2s infinite;
 }
 
-/* ========= Mobile tweaks ========= */
+/* =========================
+   QR
+========================= */
+.qr {
+  width: 160px;
+  margin: 22px auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   Footer
+========================= */
+.footer {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* =========================
+   Mobile
+========================= */
 @media (max-width: 420px) {
   .card {
     padding: 32px 20px;
   }
   h1 {
-    font-size: 26px;
+    font-size: 24px;
   }
   .names {
     font-size: 20px;
