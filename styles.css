@@ -170,4 +170,11 @@ h1 {
   font-weight: 600;
   color: #8b5e3c; /* نفس تون الاسم */
   animation: pulse 1s infinite;
+}body {
+    background: linear-gradient(
+        135deg,
+        #f8f6f2,
+        #e9dcff
+    );
+    min-height: 100vh;
 }
