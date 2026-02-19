@@ -39,10 +39,11 @@ body{
 
   background-color:#ffffff;
 
-  background-image:
-    radial-gradient(circle, rgba(155,100,255,0.15) 1px, transparent 1.2px),
-    radial-gradient(circle, rgba(155,100,255,0.10) 1px, transparent 1.2px);
+ background-image:
+  radial-gradient(circle, rgba(155,100,255,0.35) 2px, transparent 2.5px),
+  radial-gradient(circle, rgba(155,100,255,0.25) 2px, transparent 2.5px);
 
+background-size:18px 18px, 30px 30px;
   background-size:22px 22px, 36px 36px;
   background-position:0 0, 10px 14px;
 
