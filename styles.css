@@ -1,151 +1,187 @@
 /* =========================
    Base
 ========================= */
-body {
-  margin: 0;
-  font-family: "Georgia", serif;
-  background: #faf8f4; /* أوف وايت */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 30px 14px;
-  box-sizing: border-box;
+body{
+  margin:0;
+  font-family:"Georgia", serif;
+  background:#faf8f4;            /* أوف وايت للصفحة */
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:30px 14px;
+  box-sizing:border-box;
 }
 
 /* =========================
    Language Button
 ========================= */
-#langBtn {
-  position: fixed;
-  top: 18px;
-  right: 18px;
-  padding: 8px 14px;
-  border-radius: 999px;
-  border: 1px solid #d7c6ff;
-  background: #ffffff;
-  color: #5e3b8c;
-  cursor: pointer;
-  font-size: 14px;
-  transition: 0.2s ease;
+#langBtn{
+  position:fixed;
+  top:18px;
+  right:18px;
+  padding:8px 14px;
+  border-radius:999px;
+  border:1px solid #d7c6ff;
+  background:#fff;
+  color:#5e3b8c;
+  cursor:pointer;
+  font-size:14px;
+  transition:0.2s ease;
 }
-
-#langBtn:hover {
-  background: #f3edff;
-}
+#langBtn:hover{ background:#f3edff; }
 
 /* =========================
-   Main Card
+   Card + Purple Pattern (like your example)
 ========================= */
-.card {
-  background: #ffffff;
-  width: 90%;
-  max-width: 460px;
-  padding: 40px 30px;
-  border-radius: 18px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid #efe7ff;
-  box-shadow: 0 18px 50px rgba(94, 59, 140, 0.12);
+.card{
+  width:90%;
+  max-width:460px;
+  padding:40px 30px;
+  border-radius:18px;
+  text-align:center;
+
+  background:#ffffff;
+  border:1px solid #eee6ff;
+  box-shadow:0 18px 50px rgba(94,59,140,.12);
+
+  position:relative;
+  overflow:hidden;
+  isolation:isolate; /* مهم عشان الطبقات تشتغل صح */
 }
 
-/* Purple subtle pattern */
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(circle at 25% 30%, rgba(155, 100, 255, 0.10) 2px, transparent 2px),
-    radial-gradient(circle at 75% 70%, rgba(155, 100, 255, 0.10) 2px, transparent 2px);
-  background-size: 120px 120px;
-  opacity: 0.6;
-  pointer-events: none;
+/* 1) ورق مطبوع: خطوط خفيفة جدًا + نقط صغيرة */
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+
+  background:
+    /* خطوط رأسية خفيفة */
+    repeating-linear-gradient(
+      90deg,
+      rgba(132, 84, 200, 0.06) 0px,
+      rgba(132, 84, 200, 0.06) 1px,
+      transparent 1px,
+      transparent 28px
+    ),
+    /* خطوط أفقية خفيفة */
+    repeating-linear-gradient(
+      0deg,
+      rgba(132, 84, 200, 0.04) 0px,
+      rgba(132, 84, 200, 0.04) 1px,
+      transparent 1px,
+      transparent 28px
+    ),
+    /* نقط خفيفة عشوائية الإحساس */
+    radial-gradient(circle at 22% 28%, rgba(155,100,255,0.12) 1.4px, transparent 1.5px),
+    radial-gradient(circle at 78% 68%, rgba(155,100,255,0.10) 1.4px, transparent 1.5px),
+    radial-gradient(circle at 55% 42%, rgba(155,100,255,0.08) 1.2px, transparent 1.3px);
+
+  opacity:0.35;          /* خفيف جدًا زي المثال */
+}
+
+/* 2) “زخرفة نباتية” ناعمة في ركنين (شبه اللي في الصورة) */
+.card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+
+  background:
+    radial-gradient(closest-side at 12% 78%, rgba(155,100,255,0.14), transparent 65%),
+    radial-gradient(closest-side at 88% 22%, rgba(155,100,255,0.12), transparent 60%);
+  opacity:0.35;
+  filter: blur(0.4px);
 }
 
 /* =========================
    Typography
 ========================= */
-.basmala {
-  font-size: 15px;
-  margin-bottom: 18px;
-  color: #6a5a7a;
+.basmala{
+  font-size:15px;
+  margin-bottom:18px;
+  color:#6a5a7a;
+  position:relative;
+  z-index:1;
 }
-
-h1 {
-  font-size: 28px;
-  margin: 8px 0 10px;
-  color: #2f2f2f;
+h1{
+  font-size:28px;
+  margin:8px 0 10px;
+  color:#2f2f2f;
+  position:relative;
+  z-index:1;
 }
-
-.names {
-  font-size: 22px;
-  margin: 14px 0 16px;
-  font-weight: 700;
-  color: #5e3b8c; /* بنفسجي */
+.names{
+  font-size:22px;
+  margin:14px 0 16px;
+  font-weight:700;
+  color:#5e3b8c;
+  position:relative;
+  z-index:1;
 }
-
-#text {
-  margin: 18px 0 22px;
-  font-size: 16px;
-  color: #444;
-  line-height: 1.8;
+#text{
+  margin:18px 0 22px;
+  font-size:16px;
+  color:#444;
+  line-height:1.8;
+  position:relative;
+  z-index:1;
 }
-
-.details p {
-  margin: 6px 0;
-  font-size: 15px;
-  color: #3f3f3f;
+.details p{
+  margin:6px 0;
+  font-size:15px;
+  color:#3f3f3f;
+  position:relative;
+  z-index:1;
 }
 
 /* =========================
    Countdown
 ========================= */
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.03); }
-  100% { transform: scale(1); }
+@keyframes pulse{
+  0%{ transform:scale(1); }
+  50%{ transform:scale(1.03); }
+  100%{ transform:scale(1); }
 }
-
-.countdown {
-  margin-top: 14px;
-  font-size: 16px;
-  font-weight: 700;
-  color: #5e3b8c;
-  animation: pulse 1.2s infinite;
-}
-
-/* =========================
-   QR
-========================= */
-.qr {
-  width: 160px;
-  margin: 22px auto;
-  display: block;
-  border-radius: 12px;
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+.countdown{
+  margin-top:14px;
+  font-size:16px;
+  font-weight:700;
+  color:#5e3b8c;
+  animation:pulse 1.2s infinite;
+  position:relative;
+  z-index:1;
 }
 
 /* =========================
-   Footer
+   QR + Footer
 ========================= */
-.footer {
-  margin-top: 18px;
-  font-size: 14px;
-  color: #666;
+.qr{
+  width:160px;
+  margin:22px auto;
+  display:block;
+  border-radius:12px;
+  box-shadow:0 10px 22px rgba(0,0,0,.08);
+  position:relative;
+  z-index:1;
+}
+.footer{
+  margin-top:18px;
+  font-size:14px;
+  color:#666;
+  position:relative;
+  z-index:1;
 }
 
 /* =========================
    Mobile
 ========================= */
-@media (max-width: 420px) {
-  .card {
-    padding: 32px 20px;
-  }
-  h1 {
-    font-size: 24px;
-  }
-  .names {
-    font-size: 20px;
-  }
+@media (max-width:420px){
+  .card{ padding:32px 20px; }
+  h1{ font-size:24px; }
+  .names{ font-size:20px; }
 }
