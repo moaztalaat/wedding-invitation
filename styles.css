@@ -48,7 +48,7 @@ body {
   content: "";
   position: absolute;
   inset: -40px;
-  background: radial-gradient(circle at center, rgba(155, 100, 255, 0.15), transparent 70%);
+  background: radial-gradient(circle at center, rgba(155, 100, 255, 0.25), transparent 70%);
   z-index: -1;
   border-radius: 30px;
 }}
