@@ -1,4 +1,5 @@
-/* =========================
+body { background: #ff0000 !important; }
+.card { outline: 8px solid #00ff00 !important; }/* =========================
    Base
 ========================= */
 body{
