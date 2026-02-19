@@ -34,20 +34,25 @@ body{
 /* =========================
    Card + Purple Pattern (like your example)
 ========================= */
-.card{
-  width:90%;
-  max-width:460px;
-  padding:40px 30px;
-  border-radius:18px;
-  text-align:center;
+.card {
+  width: 90%;
+  max-width: 460px;
+  padding: 40px 30px;
+  border-radius: 18px;
+  text-align: center;
 
-  background:#ffffff;
-  border:1px solid #eee6ff;
-  box-shadow:0 18px 50px rgba(94,59,140,.12);
+  /* خلفية بيضا + نقش بربل خفيف */
+  background:
+    radial-gradient(circle at 20% 25%, rgba(155,100,255,0.12) 2px, transparent 3px),
+    radial-gradient(circle at 80% 70%, rgba(155,100,255,0.10) 2px, transparent 3px),
+    radial-gradient(circle at 50% 40%, rgba(155,100,255,0.08) 1.5px, transparent 2px),
+    #ffffff;
 
-  position:relative;
-  overflow:hidden;
-  isolation:isolate; /* مهم عشان الطبقات تشتغل صح */
+  background-size: 120px 120px;
+
+  border: 1px solid #eee6ff;
+  box-shadow: 0 18px 50px rgba(94,59,140,.12);
+}
 }
 
 /* 1) ورق مطبوع: خطوط خفيفة جدًا + نقط صغيرة */
