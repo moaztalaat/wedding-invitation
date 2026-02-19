@@ -1,112 +1,153 @@
 /* =========================
    Base
 ========================= */
-body {
-  margin: 0;
-  font-family: 'Cinzel', serif;
-  background: #faf8f4;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 30px 14px;
-  box-sizing: border-box;
+body{
+  margin:0;
+  font-family:'Cinzel', serif;
+  background:#faf8f4;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:30px 14px;
+  box-sizing:border-box;
 }
 
 /* =========================
    Language Button
 ========================= */
-#langBtn {
-  position: fixed;
-  top: 18px;
-  right: 18px;
-  padding: 8px 14px;
-  border-radius: 999px;
-  border: 1px solid #d7c6ff;
-  background: #ffffff;
-  color: #5e3b8c;
-  cursor: pointer;
-  font-size: 14px;
+#langBtn{
+  position:fixed;
+  top:18px;
+  right:18px;
+  padding:8px 14px;
+  border-radius:999px;
+  border:1px solid #d7c6ff;
+  background:#fff;
+  color:#5e3b8c;
+  cursor:pointer;
+  font-size:14px;
 }
+#langBtn:hover{ background:#f3edff; }
 
 /* =========================
    Card
 ========================= */
-.card {
-  position: relative;
-  width: 90%;
-  max-width: 480px;
-  padding: 60px 40px;
-  border-radius: 22px;
-  text-align: center;
-  background: #ffffff;
-  border: 2px solid rgba(155,100,255,0.5);
-  box-shadow: 0 20px 60px rgba(94,59,140,.15);
+.card{
+  position:relative;
+  width:90%;
+  max-width:480px;
+  padding:60px 40px;
+  border-radius:22px;
+  text-align:center;
+  background:#ffffff;
+  box-shadow:0 20px 60px rgba(94,59,140,.15);
+  overflow:hidden;
+}
+
+/* =========================
+   Floral soft corners (behind everything)
+========================= */
+.card ._noop{display:none;} /* nothing */
+
+.card{
+  background:
+    radial-gradient(circle at 86% 14%, rgba(155,100,255,0.10), transparent 58%),
+    radial-gradient(circle at 14% 86%, rgba(155,100,255,0.08), transparent 60%),
+    #ffffff;
+}
+
+/* =========================
+   Double purple frame (above background)
+========================= */
+.card::before{
+  content:"";
+  position:absolute;
+  inset:18px;
+  border-radius:16px;
+  border:2px solid rgba(155,100,255,0.55);
+  pointer-events:none;
+}
+
+.card::after{
+  content:"";
+  position:absolute;
+  inset:28px;
+  border-radius:14px;
+  border:1px solid rgba(155,100,255,0.30);
+  pointer-events:none;
 }
 
 /* =========================
    Typography
 ========================= */
-.basmala {
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: #5e3b8c;
+.basmala{
+  font-size:16px;
+  margin-bottom:18px;
+  color:#5e3b8c;
 }
 
-h1 {
-  font-size: 36px;
-  margin: 10px 0;
-  letter-spacing: 2px;
+h1{
+  font-size:34px;
+  margin:10px 0 8px;
+  letter-spacing:2px;
+  color:#2f2f2f;
 }
 
-.names {
-  font-size: 26px;
-  margin: 15px 0;
-  color: #5e3b8c;
-  letter-spacing: 1px;
-  font-weight: 600;
+.names{
+  font-size:24px;
+  margin:14px 0 16px;
+  color:#5e3b8c;
+  letter-spacing:1px;
+  font-weight:600;
 }
 
-#text {
-  margin: 20px 0;
-  font-size: 18px;
-  line-height: 1.8;
+#text{
+  margin:18px 0 20px;
+  font-size:16px;
+  color:#444;
+  line-height:1.8;
+  font-family:'Cinzel', serif;
 }
 
-.details p {
-  margin: 8px 0;
-  font-size: 16px;
+.details p{
+  margin:8px 0;
+  font-size:15px;
+  color:#3f3f3f;
 }
 
 /* =========================
    Countdown
 ========================= */
-.countdown {
-  margin-top: 14px;
-  font-size: 18px;
-  color: #5e3b8c;
-  font-weight: 600;
+.countdown{
+  margin-top:14px;
+  font-size:16px;
+  color:#5e3b8c;
+  font-weight:600;
 }
 
 /* =========================
    QR + Footer
 ========================= */
-.qr {
-  width: 160px;
-  margin: 22px auto;
-  display: block;
+.qr{
+  width:160px;
+  margin:22px auto;
+  display:block;
+  border-radius:12px;
+  box-shadow:0 10px 22px rgba(0,0,0,.08);
 }
 
-.footer {
-  margin-top: 18px;
-  font-size: 16px;
+.footer{
+  margin-top:18px;
+  font-size:14px;
+  color:#666;
 }
 
 /* =========================
    Mobile
 ========================= */
-@media (max-width: 420px) {
-  .card { padding: 45px 25px; }
-  h1 { font-size: 26px; }
-  .names { font-size: 20px; }
+@media (max-width:420px){
+  .card{ padding:50px 25px; }
+  h1{ font-size:26px; }
+  .names{ font-size:20px; }
 }
