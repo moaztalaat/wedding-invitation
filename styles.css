@@ -44,8 +44,14 @@ body {
   position: relative;
   z-index: 1;
   box-shadow: 0 20px 50px rgba(94, 59, 140, 0.12);
-}
-}
+}.card::before {
+  content: "";
+  position: absolute;
+  inset: -40px;
+  background: radial-gradient(circle at center, rgba(155, 100, 255, 0.15), transparent 70%);
+  z-index: -1;
+  border-radius: 30px;
+}}
 
 /* ========= Typography ========= */
 .basmala {
