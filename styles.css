@@ -40,27 +40,13 @@ body{
   text-align:center;
 
   /* نقش بربل مطبوع مباشر */
-  background:
-    repeating-linear-gradient(
-      90deg,
-      rgba(155,100,255,0.12) 0px,
-      rgba(155,100,255,0.12) 1px,
-      transparent 1px,
-      transparent 24px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      rgba(155,100,255,0.10) 0px,
-      rgba(155,100,255,0.10) 1px,
-      transparent 1px,
-      transparent 24px
-    ),
-    radial-gradient(circle at 20% 30%, rgba(155,100,255,0.18) 1.5px, transparent 1.6px),
-    radial-gradient(circle at 80% 70%, rgba(155,100,255,0.15) 1.5px, transparent 1.6px),
-    #ffffff;
-
-  border:1px solid #eee6ff;
-  box-shadow:0 18px 50px rgba(94,59,140,.12);
+ background:
+  radial-gradient(circle at 18% 22%, rgba(155,100,255,0.10) 1.2px, transparent 1.3px),
+  radial-gradient(circle at 62% 35%, rgba(155,100,255,0.08) 1.1px, transparent 1.2px),
+  radial-gradient(circle at 82% 68%, rgba(155,100,255,0.09) 1.2px, transparent 1.3px),
+  radial-gradient(circle at 32% 78%, rgba(155,100,255,0.07) 1.1px, transparent 1.2px),
+  #ffffff;
+background-size: 140px 140px;
 }
 
 /* =========================
