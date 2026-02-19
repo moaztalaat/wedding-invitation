@@ -34,7 +34,7 @@ body{
    Card (White + Purple pattern like printed paper)
 ========================= */
 .card{
-  width:90%;
+   background-color: yellow !important;  width:90%;
   max-width:460px;
   padding:40px 30px;
   border-radius:18px;
