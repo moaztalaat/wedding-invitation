@@ -37,23 +37,51 @@ body {
    Card (White + CLEAR Purple Pattern)
 ========================= */
 .card {
+  position: relative;
   width: 90%;
   max-width: 460px;
   padding: 40px 30px;
   border-radius: 18px;
   text-align: center;
-
-  /* نقش بربل واضح جدًا */
-  background:
-    radial-gradient(circle, rgba(155,100,255,0.45) 2px, transparent 2.6px),
-    radial-gradient(circle, rgba(155,100,255,0.30) 2px, transparent 2.6px),
-    #ffffff;
-
-  background-size: 18px 18px, 32px 32px;
-  background-position: 0 0, 10px 14px;
-
+  background: #ffffff;
   border: 1px solid #eee6ff;
   box-shadow: 0 18px 50px rgba(94,59,140,.12);
+  overflow: hidden;
+}
+
+/* زخرفة ورد خفيفة في الركن العلوي اليمين */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 220px;
+  height: 220px;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(155,100,255,0.25), transparent 60%),
+    radial-gradient(circle at 70% 60%, rgba(155,100,255,0.18), transparent 70%),
+    radial-gradient(circle at 50% 50%, rgba(155,100,255,0.12), transparent 75%);
+  border-radius: 50%;
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+/* زخرفة ورد في الركن السفلي الشمال */
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: -70px;
+  left: -70px;
+  width: 240px;
+  height: 240px;
+  background:
+    radial-gradient(circle at 60% 40%, rgba(155,100,255,0.22), transparent 60%),
+    radial-gradient(circle at 40% 70%, rgba(155,100,255,0.15), transparent 70%),
+    radial-gradient(circle at 50% 50%, rgba(155,100,255,0.10), transparent 75%);
+  border-radius: 50%;
+  filter: blur(3px);
+  pointer-events: none;
+}
 }
 
 /* =========================
