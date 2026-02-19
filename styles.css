@@ -3,7 +3,7 @@
 ========================= */
 body {
   margin: 0;
-  font-family: "Georgia", serif;
+  font-family: 'Cinzel', serif;
   background: #faf8f4;
   min-height: 100vh;
   display: flex;
@@ -27,11 +27,6 @@ body {
   color: #5e3b8c;
   cursor: pointer;
   font-size: 14px;
-  transition: 0.2s ease;
-}
-
-#langBtn:hover {
-  background: #f3edff;
 }
 
 /* =========================
@@ -40,102 +35,57 @@ body {
 .card {
   position: relative;
   width: 90%;
-  max-width: 460px;
-  padding: 60px 40px; /* زودنا padding عشان الفريم */
-  border-radius: 20px;
+  max-width: 480px;
+  padding: 60px 40px;
+  border-radius: 22px;
   text-align: center;
   background: #ffffff;
-  box-shadow: 0 18px 50px rgba(94,59,140,.12);
-  overflow: hidden;
-}
-
-/* =========================
-   Double Purple Frame
-========================= */
-
-/* الخط الخارجي */
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 18px;
-  border-radius: 16px;
-  border: 2px solid rgba(155,100,255,0.55);
-  pointer-events: none;
-}
-
-/* الخط الداخلي */
-.card::after {
-  content: "";
-  position: absolute;
-  inset: 28px;
-  border-radius: 14px;
-  border: 1px solid rgba(155,100,255,0.30);
-  pointer-events: none;
-}
-
-/* =========================
-   Floral Background Layer
-========================= */
-.card::selection { background: transparent; }
-
-/* خلفية ورود خفيفة جوه الكارد */
-.card {
-  background:
-    radial-gradient(circle at 85% 15%, rgba(155,100,255,0.12), transparent 60%),
-    radial-gradient(circle at 15% 85%, rgba(155,100,255,0.10), transparent 60%),
-    #ffffff;
+  border: 2px solid rgba(155,100,255,0.5);
+  box-shadow: 0 20px 60px rgba(94,59,140,.15);
 }
 
 /* =========================
    Typography
 ========================= */
 .basmala {
-  font-size: 15px;
-  margin-bottom: 18px;
-  color: #6a5a7a;
-}
-
-h1 {
-  font-size: 28px;
-  margin: 8px 0 10px;
-  color: #2f2f2f;
-}
-
-.names {
-  font-size: 22px;
-  margin: 14px 0 16px;
-  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 20px;
   color: #5e3b8c;
 }
 
+h1 {
+  font-size: 36px;
+  margin: 10px 0;
+  letter-spacing: 2px;
+}
+
+.names {
+  font-size: 26px;
+  margin: 15px 0;
+  color: #5e3b8c;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
 #text {
-  margin: 18px 0 22px;
-  font-size: 16px;
-  color: #444;
+  margin: 20px 0;
+  font-size: 18px;
   line-height: 1.8;
 }
 
 .details p {
-  margin: 6px 0;
-  font-size: 15px;
-  color: #3f3f3f;
+  margin: 8px 0;
+  font-size: 16px;
 }
 
 /* =========================
    Countdown
 ========================= */
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.03); }
-  100% { transform: scale(1); }
-}
-
 .countdown {
   margin-top: 14px;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 18px;
   color: #5e3b8c;
-  animation: pulse 1.2s infinite;
+  font-weight: 600;
 }
 
 /* =========================
@@ -145,21 +95,18 @@ h1 {
   width: 160px;
   margin: 22px auto;
   display: block;
-  border-radius: 12px;
-  box-shadow: 0 10px 22px rgba(0,0,0,.08);
 }
 
 .footer {
   margin-top: 18px;
-  font-size: 14px;
-  color: #666;
+  font-size: 16px;
 }
 
 /* =========================
    Mobile
 ========================= */
 @media (max-width: 420px) {
-  .card { padding: 50px 25px; }
-  h1 { font-size: 24px; }
+  .card { padding: 45px 25px; }
+  h1 { font-size: 26px; }
   .names { font-size: 20px; }
 }
