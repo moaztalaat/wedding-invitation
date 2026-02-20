@@ -23,59 +23,40 @@ body{
   padding:8px 14px;
   border-radius:999px;
   border:1px solid #d7c6ff;
-  background:#fff;
+  background:#ffffff;
   color:#5e3b8c;
   cursor:pointer;
   font-size:14px;
 }
-#langBtn:hover{ background:#f3edff; }
+#langBtn:hover{
+  background:#f3edff;
+}
 
 /* =========================
    Card
 ========================= */
 .card{
-  position:relative;
   width:90%;
   max-width:480px;
   padding:60px 40px;
   border-radius:22px;
   text-align:center;
-  background:#ffffff;
-  box-shadow:0 20px 60px rgba(94,59,140,.15);
-  overflow:hidden;
-}
+  position:relative;
 
-/* =========================
-   Floral soft corners (behind everything)
-========================= */
-.card ._noop{display:none;} /* nothing */
-
-.card{
+  /* Floral soft background */
   background:
     radial-gradient(circle at 86% 14%, rgba(155,100,255,0.10), transparent 58%),
     radial-gradient(circle at 14% 86%, rgba(155,100,255,0.08), transparent 60%),
     #ffffff;
-}
 
-/* =========================
-   Double purple frame (above background)
-========================= */
-.card::before{
-  content:"";
-  position:absolute;
-  inset:18px;
-  border-radius:16px;
+  /* Double purple frame */
   border:2px solid rgba(155,100,255,0.55);
-  pointer-events:none;
-}
+  box-shadow:
+    0 0 0 10px #ffffff,
+    0 0 0 12px rgba(155,100,255,0.30),
+    0 20px 60px rgba(94,59,140,.15);
 
-.card::after{
-  content:"";
-  position:absolute;
-  inset:28px;
-  border-radius:14px;
-  border:1px solid rgba(155,100,255,0.30);
-  pointer-events:none;
+  overflow:hidden;
 }
 
 /* =========================
@@ -107,7 +88,6 @@ h1{
   font-size:16px;
   color:#444;
   line-height:1.8;
-  font-family:'Cinzel', serif;
 }
 
 .details p{
