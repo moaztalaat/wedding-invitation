@@ -1,4 +1,11 @@
 /* =========================
+   Prevent iPhone Auto Zoom
+========================= */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* =========================
    Base
 ========================= */
 body{
@@ -20,10 +27,11 @@ body{
   width:90%;
   max-width:500px;
   padding:70px 50px;
-  border-radius:18px;
+  border-radius:22px;
   text-align:center;
   background:#ffffff;
 
+  /* Double Purple Frame */
   border:3px solid #5e3b8c;
   box-shadow:
     0 0 0 12px #ffffff,
@@ -38,37 +46,37 @@ body{
 .basmala{
   font-size:16px;
   letter-spacing:2px;
-  margin-bottom:20px;
+  margin-bottom:22px;
   color:#5e3b8c;
 }
 
 h1{
-  font-size:40px;
-  letter-spacing:6px;
+  font-size:42px;
+  letter-spacing:8px;
   font-weight:500;
-  margin:10px 0;
+  margin:12px 0;
   color:#2f2f2f;
 }
 
 .names{
-  font-size:28px;
+  font-size:30px;
   font-weight:600;
-  margin:20px 0;
+  margin:22px 0;
   letter-spacing:3px;
   color:#5e3b8c;
 }
 
 #text{
-  font-size:18px;
-  margin:25px 0;
+  font-size:19px;
+  margin:28px 0;
   line-height:1.8;
   letter-spacing:1px;
   color:#444;
 }
 
 .details p{
-  margin:8px 0;
-  font-size:17px;
+  margin:10px 0;
+  font-size:18px;
   letter-spacing:1px;
   color:#333;
 }
@@ -81,21 +89,60 @@ h1{
 }
 
 .qr{
-  width:160px;
-  margin:30px auto;
+  width:170px;
+  margin:32px auto;
   display:block;
 }
 
 .footer{
   font-size:16px;
   letter-spacing:2px;
-  margin-top:20px;
+  margin-top:22px;
   color:#666;
 }
 
-/* Mobile */
-@media (max-width:420px){
-  .card{ padding:50px 25px; }
-  h1{ font-size:28px; letter-spacing:3px; }
-  .names{ font-size:22px; }
+/* =========================
+   Mobile Optimization
+========================= */
+@media (max-width:480px){
+
+  body{
+    padding:20px 10px;
+  }
+
+  .card{
+    padding:45px 22px;
+    max-width:360px;
+    border-radius:18px;
+  }
+
+  h1{
+    font-size:30px;
+    letter-spacing:5px;
+  }
+
+  .names{
+    font-size:22px;
+    letter-spacing:2px;
+  }
+
+  #text{
+    font-size:16px;
+  }
+
+  .details p{
+    font-size:15px;
+  }
+
+  .countdown{
+    font-size:15px;
+  }
+
+  .qr{
+    width:140px;
+  }
+
+  .footer{
+    font-size:14px;
+  }
 }
