@@ -1,11 +1,5 @@
-/* =========================
-   Prevent iPhone Auto Zoom
-========================= */
 html { -webkit-text-size-adjust: 100%; }
 
-/* =========================
-   Base
-========================= */
 body{
   margin:0;
   font-family:'Cormorant Garamond', serif;
@@ -16,169 +10,133 @@ body{
   justify-content:center;
   padding:30px 14px;
   box-sizing:border-box;
-
-  /* كل الدعوة كابيتال */
   text-transform:uppercase;
 }
 
-/* =========================
-   Card + Fade-in
-========================= */
+/* Fade */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity:0; transform:translateY(10px); }
+  to { opacity:1; transform:translateY(0); }
 }
 
 .card{
   width:90%;
   max-width:520px;
-  padding:78px 58px;
+  padding:80px 60px;
   border-radius:22px;
   text-align:center;
   background:#ffffff;
 
-  /* Double Frame: الخارجي أتقل + الداخلي أرفع */
   border:3px solid #5e3b8c;
   box-shadow:
-    0 0 0 12px #ffffff,                  /* مسافة بيضا بين الخطين */
-    0 0 0 13px rgba(94,59,140,0.38),     /* الخط الداخلي الرفيع */
-    0 22px 65px rgba(0,0,0,0.12);        /* ظل */
+    0 0 0 12px #ffffff,
+    0 0 0 13px rgba(94,59,140,0.35),
+    0 22px 65px rgba(0,0,0,0.12);
 
-  animation: fadeUp .6s ease both;
+  animation:fadeUp .6s ease both;
 }
 
-/* =========================
-   Title hierarchy + divider
-========================= */
-.title-block{ margin-bottom: 18px; }
+/* Ornament */
+.ornament{
+  font-size:22px;
+  letter-spacing:6px;
+  color:#5e3b8c;
+  margin:10px 0;
+  opacity:0.85;
+}
 
+/* Title */
 .title-top{
-  font-size: 24px;
-  letter-spacing: 10px;
-  font-weight: 500;
-  color:#2f2f2f;
+  font-size:24px;
+  letter-spacing:10px;
+  font-weight:500;
 }
 
 .title-main{
-  font-size: 58px;         /* INVITATION أكبر */
-  letter-spacing: 12px;
-  font-weight: 500;
-  margin-top: -6px;
-  color:#2f2f2f;
+  font-size:60px;
+  letter-spacing:14px;
+  margin-top:-8px;
 }
 
 .divider{
-  width: 72%;
-  height: 1px;
-  margin: 18px auto 0;
-  background: rgba(94,59,140,0.55);
+  width:70%;
+  height:1px;
+  background:#5e3b8c;
+  margin:20px auto;
+  opacity:0.6;
 }
 
-/* =========================
-   Typography
-========================= */
-.basmala{
-  font-size:16px;
-  letter-spacing:3px;
-  margin-bottom:26px;
-  color:#5e3b8c;
-
-  /* عشان العربي مايتحولش */
-  text-transform:none;
-}
-
+/* Names */
 .names{
   font-size:32px;
-  font-weight:600;
-  margin:30px 0 26px;   /* مساحات أكتر حوالين الأسماء */
+  margin:35px 0 25px;
   letter-spacing:4px;
   color:#5e3b8c;
 }
 
+/* Text */
 #text{
   font-size:20px;
-  margin:28px 0 30px;
-  line-height:1.9;
+  margin:30px 0;
   letter-spacing:2px;
-  color:#444;
+  line-height:1.8;
 }
 
 .details p{
-  margin:12px 0;
   font-size:18px;
+  margin:12px 0;
   letter-spacing:2px;
-  color:#333;
 }
 
-/* =========================
-   Location Line (bolder/bigger)
-========================= */
+/* Location */
 .location-text{
   margin-top:40px;
   font-size:24px;
   font-weight:700;
   letter-spacing:3px;
-  color:#2f2f2f;
 }
 
 .location-link{
-  /* نخليها Small Caps فعليًا */
-  text-transform:none;          /* نلغي uppercase اللي على body */
-  font-variant: small-caps;
-  font-size: 1.08em;
+  text-transform:none;
+  font-variant:small-caps;
   font-weight:700;
-
   text-decoration:none;
-  color:#5e3b8c;
   border-bottom:2px solid #5e3b8c;
-  padding-bottom:4px;
-  transition:0.25s ease;
+  color:#5e3b8c;
+  padding-bottom:3px;
+  transition:.3s;
 }
 
 .location-link:hover{
-  letter-spacing:4px;
-  opacity:0.85;
+  letter-spacing:5px;
 }
 
-/* =========================
-   Countdown + Footer
-========================= */
-.countdown{
-  margin-top:24px;
-  font-size:18px;
-  font-weight:600;
-  color:#5e3b8c;
-}
-
+/* Footer */
 .footer{
+  margin-top:30px;
   font-size:18px;
   letter-spacing:4px;
-  margin-top:28px;
   color:#666;
 }
 
-/* =========================
-   Mobile (خليه شبه الديسكتوب)
-========================= */
+/* Mobile */
 @media (max-width:480px){
-  .card{ padding:66px 32px; }
 
-  .title-top{
-    font-size:20px;
-    letter-spacing:8px;
-  }
+  .card{ padding:65px 30px; }
 
   .title-main{
     font-size:44px;
     letter-spacing:9px;
   }
 
-  .divider{ width: 78%; }
+  .title-top{
+    font-size:20px;
+    letter-spacing:7px;
+  }
 
   .names{
-    font-size:26px;
+    font-size:24px;
     letter-spacing:3px;
-    margin:26px 0 22px;
   }
 
   #text{ font-size:17px; }
