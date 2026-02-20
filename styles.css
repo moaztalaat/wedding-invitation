@@ -1,4 +1,5 @@
 html { -webkit-text-size-adjust: 100%; }
+* { box-sizing: border-box; }
 
 body{
   margin:0;
@@ -9,13 +10,12 @@ body{
   align-items:center;
   justify-content:center;
   padding:28px 14px;
-  box-sizing:border-box;
   text-transform:uppercase;
 }
 
 .card{
   width:90%;
-  max-width:500px;   /* متوازن */
+  max-width:500px;
   padding:65px 50px;
   border-radius:22px;
   text-align:center;
@@ -26,6 +26,8 @@ body{
     0 0 0 12px #ffffff,
     0 0 0 13px rgba(94,59,140,0.35),
     0 22px 60px rgba(0,0,0,0.12);
+
+  overflow:hidden; /* ضمان نهائي: أي حاجة ما تطلعش برا */
 }
 
 /* Ornament */
@@ -37,18 +39,32 @@ body{
   opacity:0.85;
 }
 
-/* TITLE — مضبوط */
+/* ===== TITLE (مضمون جوه الفريم) ===== */
+.title-block{
+  padding: 0 16px; /* مسافة من الجانبين علشان العنوان ما يقربش للفريم */
+}
+
 .title-top{
   font-size:26px;
   letter-spacing:8px;
   margin-top:10px;
+  color:#2f2f2f;
 }
 
+/* clamp يخليها قوية وتفضل جوه الكارت على كل الشاشات */
 .title-main{
-  font-size:64px;      /* قوي لكن مش بيكسر الفريم */
-  letter-spacing:6px;  /* قللنا المسافة علشان ما يخرجش */
-  margin-top:-6px;
   font-weight:500;
+  color:#2f2f2f;
+
+  font-size: clamp(44px, 7.2vw, 64px);
+  letter-spacing: clamp(3px, 0.7vw, 7px);
+
+  margin-top:-6px;
+
+  max-width:100%;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:clip;
 }
 
 .divider{
@@ -57,6 +73,15 @@ body{
   background:#5e3b8c;
   margin:22px auto;
   opacity:0.6;
+}
+
+/* Arabic line */
+.basmala{
+  font-size:16px;
+  letter-spacing:3px;
+  margin-bottom:22px;
+  color:#5e3b8c;
+  text-transform:none;
 }
 
 .names{
@@ -86,6 +111,7 @@ body{
   font-size:20px;
   font-weight:700;
   letter-spacing:2px;
+  color:#2f2f2f;
 }
 
 .location-link{
@@ -107,7 +133,6 @@ body{
 
 /* Mobile */
 @media (max-width:480px){
-
   .card{
     padding:55px 28px;
   }
@@ -117,16 +142,11 @@ body{
     letter-spacing:6px;
   }
 
-  .title-main{
-    font-size:48px;
-    letter-spacing:4px;
+  /* clamp هنا كفاية، بس بنقلل padding الجانبي شوية */
+  .title-block{
+    padding: 0 10px;
   }
 
-  .names{
-    font-size:22px;
-  }
-
-  #text{
-    font-size:16px;
-  }
+  .names{ font-size:22px; }
+  #text{ font-size:16px; }
 }
