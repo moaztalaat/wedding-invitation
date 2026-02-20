@@ -18,6 +18,7 @@ body{
   justify-content:center;
   padding:30px 14px;
   box-sizing:border-box;
+  text-transform:uppercase; /* يخلي كل الكلام كابيتال */
 }
 
 /* =========================
@@ -25,13 +26,12 @@ body{
 ========================= */
 .card{
   width:90%;
-  max-width:500px;
-  padding:70px 50px;
+  max-width:520px;
+  padding:75px 55px;
   border-radius:22px;
   text-align:center;
   background:#ffffff;
 
-  /* Double Purple Frame */
   border:3px solid #5e3b8c;
   box-shadow:
     0 0 0 12px #ffffff,
@@ -45,126 +45,115 @@ body{
 
 .basmala{
   font-size:16px;
-  letter-spacing:2px;
-  margin-bottom:22px;
+  letter-spacing:3px;
+  margin-bottom:26px;
   color:#5e3b8c;
 }
 
 h1{
-  font-size:42px;
-  letter-spacing:8px;
+  font-size:46px;
+  letter-spacing:10px;
   font-weight:500;
-  margin:12px 0;
+  margin:14px 0;
   color:#2f2f2f;
 }
 
 .names{
-  font-size:30px;
+  font-size:32px;
   font-weight:600;
-  margin:22px 0;
-  letter-spacing:3px;
+  margin:24px 0;
+  letter-spacing:4px;
   color:#5e3b8c;
 }
 
 #text{
-  font-size:19px;
-  margin:28px 0;
-  line-height:1.8;
-  letter-spacing:1px;
+  font-size:20px;
+  margin:30px 0;
+  line-height:1.9;
+  letter-spacing:2px;
   color:#444;
 }
 
 .details p{
-  margin:10px 0;
+  margin:12px 0;
   font-size:18px;
-  letter-spacing:1px;
+  letter-spacing:2px;
   color:#333;
 }
 
-.countdown{
-  margin-top:18px;
-  font-size:18px;
-  font-weight:600;
-  color:#5e3b8c;
-}
-
-.qr{
-  width:170px;
-  margin:32px auto;
-  display:block;
-}
-
-.footer{
-  font-size:16px;
-  letter-spacing:2px;
-  margin-top:22px;
-  color:#666;
-}
-
 /* =========================
-   Mobile Optimization
-========================= */
-@media (max-width:480px){
-
-  body{
-    padding:20px 10px;
-  }
-
-  .card{
-    padding:45px 22px;
-    max-width:360px;
-    border-radius:18px;
-  }
-
-  h1{
-    font-size:30px;
-    letter-spacing:5px;
-  }
-
-  .names{
-    font-size:22px;
-    letter-spacing:2px;
-  }
-
-  #text{
-    font-size:16px;
-  }
-
-  .details p{
-    font-size:15px;
-  }
-
-  .countdown{
-    font-size:15px;
-  }
-
-  .qr{
-    width:140px;
-  }
-
-  .footer{
-    font-size:14px;
-  }
-}/* =========================
-   Elegant Location Line
+   Location Line
 ========================= */
 .location-text{
-  margin-top:30px;
-  font-size:18px;
-  letter-spacing:1px;
-  color:#444;
+  margin-top:40px;
+  font-size:24px;
+  font-weight:700;
+  letter-spacing:3px;
+  color:#2f2f2f;
 }
 
 .location-link{
   text-decoration:none;
   color:#5e3b8c;
-  border-bottom:1px solid #5e3b8c;
-  padding-bottom:2px;
+  border-bottom:2px solid #5e3b8c;
+  padding-bottom:4px;
+  font-weight:700;
   transition:0.3s ease;
-  font-weight:600;
 }
 
 .location-link:hover{
-  letter-spacing:2px;
-  opacity:0.8;
+  letter-spacing:5px;
+  opacity:0.85;
+}
+
+/* =========================
+   Countdown
+========================= */
+.countdown{
+  margin-top:24px;
+  font-size:18px;
+  font-weight:600;
+  color:#5e3b8c;
+}
+
+/* =========================
+   Footer
+========================= */
+.footer{
+  font-size:18px;
+  letter-spacing:4px;
+  margin-top:28px;
+  color:#666;
+}
+
+/* =========================
+   Mobile (Keep Royal Look)
+========================= */
+@media (max-width:480px){
+
+  .card{
+    padding:60px 30px;
+  }
+
+  h1{
+    font-size:34px;
+    letter-spacing:6px;
+  }
+
+  .names{
+    font-size:24px;
+    letter-spacing:3px;
+  }
+
+  #text{
+    font-size:17px;
+  }
+
+  .details p{
+    font-size:16px;
+  }
+
+  .location-text{
+    font-size:20px;
+  }
 }
