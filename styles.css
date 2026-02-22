@@ -124,22 +124,28 @@ body{
   letter-spacing:2px;
 }
 
-/* Location inside same frame */
 .location-box{
-  display:block;
-  margin:14px auto 0;
-  padding:12px 18px;
-  border:1px solid rgba(94,59,140,0.35);
-  border-radius:14px;
+  display:inline-block;
+  margin-top:14px;
+  padding:12px 26px;
+
+  border-radius:30px;
+  border:1px solid var(--purple);
+
+  background:white;
   color:var(--purple);
-  text-decoration:none;
+
   font-family:"Cinzel", serif;
   font-weight:600;
-  transition:0.2s ease;
+  letter-spacing:2px;
+
+  text-decoration:none;
+  transition:0.3s ease;
 }
 
 .location-box:hover{
-  background:rgba(94,59,140,0.05);
+  background:var(--purple);
+  color:white;
 }
 
 /* Countdown */
