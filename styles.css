@@ -53,18 +53,16 @@ body{
 
 /* clamp يخليها قوية وتفضل جوه الكارت على كل الشاشات */
 .title-main{
+  .title-main{
   font-weight:500;
   color:#2f2f2f;
+  line-height:1;
 
-  font-size: clamp(44px, 7.2vw, 64px);
-  letter-spacing: clamp(3px, 0.7vw, 7px);
+  font-size: clamp(44px, 6.6vw, 64px);
+  letter-spacing: clamp(2px, 0.45vw, 6px);
 
   margin-top:-6px;
-
-  max-width:100%;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:clip;
+}
 }
 
 .divider{
