@@ -80,12 +80,10 @@ body{
   color:#5e3b8c;
 }
 
-/* IMPORTANT: keep sentence normal case */
 #text{
-  text-transform:none;
   font-size:18px;
   margin:25px 0;
-  letter-spacing:1px;
+  letter-spacing:2px;
   line-height:1.8;
   color:#444;
 }
