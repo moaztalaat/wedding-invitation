@@ -1,77 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>WEDDING INVITATION</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<title>WEDDING INVITATION</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=2000" />
+<link rel="stylesheet" href="styles.css?v=3000">
 </head>
 
 <body>
-  <button id="langBtn" type="button">عربي</button>
 
-  <main class="card" aria-label="Wedding Invitation Card">
-    <!-- Double frame -->
-    <span class="frame frame-outer" aria-hidden="true"></span>
-    <span class="frame frame-inner" aria-hidden="true"></span>
+<main class="card">
 
-    <!-- Corner floral touches -->
-    <span class="floral floral-tr" aria-hidden="true"></span>
-    <span class="floral floral-bl" aria-hidden="true"></span>
+  <!-- Double frame -->
+  <span class="frame frame-outer"></span>
+  <span class="frame frame-inner"></span>
 
-    <p class="basmala" id="basmala">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+  <!-- Floral corners -->
+  <span class="floral floral-tr"></span>
+  <span class="floral floral-bl"></span>
 
-    <div class="ornaments" aria-hidden="true">
-      <span>✧</span><span>✦</span><span>✧</span>
-    </div>
+  <p class="basmala">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
 
-    <div class="title-block">
-      <div class="title-top" id="titleSmall">WEDDING</div>
-      <div class="title-main" id="titleBig">INVITATION</div>
-    </div>
+  <div class="ornaments">
+    <span>✧</span><span>✦</span><span>✧</span>
+  </div>
 
-    <div class="divider" aria-hidden="true"></div>
+  <div class="title-top">WEDDING</div>
+  <div class="title-main">INVITATION</div>
 
-    <div class="ornaments small" aria-hidden="true">
-      <span>✧</span><span>✦</span><span>✧</span>
-    </div>
+  <div class="divider"></div>
 
-    <h2 class="names" id="names">
-      MOAZ TALAAT <br><span class="amp">&amp;</span><br> VJOLLCA ZENKO
-    </h2>
+  <h2 class="names">
+    MOAZ TALAAT <br>
+    <span class="amp">&amp;</span><br>
+    VJOLLCA ZENKO
+  </h2>
 
-   <p class="invite-text" id="text">
-  WE ARE DELIGHTED TO INVITE YOU TO CELEBRATE OUR WEDDING
-</p>
+  <p class="invite-text">
+    WE ARE DELIGHTED TO INVITE YOU TO CELEBRATE OUR WEDDING
+  </p>
 
-    <div class="details" id="details">
-      <p class="detail-line" id="dateLine">ON WEDNESDAY, 8TH OF APRIL 2026</p>
-      <p class="detail-line" id="timeLine">AT 8 PM</p>
+  <div class="details">
+    <p>ON WEDNESDAY, 8TH OF APRIL 2026</p>
+    <p>AT 8 PM</p>
 
-      <a class="location-link"
-         id="locationLink"
-         href="https://www.google.com/maps/search/?api=1&query=Ociel%20Hall%20Ain%20El%20Hayat%20Resort%20Cairo"
-         target="_blank" rel="noopener">
-        AT OCIEL HALL – AIN EL HAYAT RESORT, CAIRO
-      </a>
+    <a class="location-link"
+       href="https://www.google.com/maps/search/?api=1&query=Ociel%20Hall%20Ain%20El%20Hayat%20Resort%20Cairo"
+       target="_blank">
+       AT OCIEL HALL – AIN EL HAYAT RESORT, CAIRO
+    </a>
+  </div>
 
-      <a class="view-location" id="viewLocation"
-         href="https://www.google.com/maps/search/?api=1&query=Ociel%20Hall%20Ain%20El%20Hayat%20Resort%20Cairo"
-         target="_blank" rel="noopener">
-        VIEW LOCATION
-      </a>
-    </div>
+  <p class="footer">YOUR PRESENCE WILL HONOR US</p>
 
-    <div id="countdown" class="countdown"></div>
+</main>
 
-    <p class="footer" id="footer">YOUR PRESENCE WILL HONOR US</p>
-  </main>
-
-  <script src="script.js?v=2000"></script>
 </body>
 </html>
