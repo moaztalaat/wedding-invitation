@@ -30,8 +30,9 @@ function setEnglish() {
   document.getElementById("titleSmall").textContent = "WEDDING";
   document.getElementById("titleBig").textContent = "INVITATION";
   document.getElementById("names").innerHTML = `MOAZ TALAAT <br><span class="amp">&amp;</span><br> VJOLLCA ZENKO`;
-  document.getElementById("text").textContent = "WE ARE DELIGHTED TO INVITE YOU TO CELEBRATE OUR WEDDING ON";
-  document.getElementById("dateLine").textContent = "ON WEDNESDAY, 8TH OF APRIL 2026";
+  <p class="invite-text" id="text">
+  WE ARE DELIGHTED TO INVITE YOU TO CELEBRATE OUR WEDDING
+</p>  document.getElementById("dateLine").textContent = "ON WEDNESDAY, 8TH OF APRIL 2026";
   document.getElementById("timeLine").textContent = "AT 8 PM";
   document.getElementById("locationLink").textContent = "AT OCIEL HALL – AIN EL HAYAT RESORT, CAIRO";
   document.getElementById("viewLocation").textContent = "VIEW LOCATION";
