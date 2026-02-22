@@ -1,52 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WEDDING INVITATION</title>
+  <meta charset="UTF-8" />
+  <title>WEDDING INVITATION</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="styles.css?v=2000" />
 </head>
+
 <body>
+  <button id="langBtn" type="button">عربي</button>
 
-<div class="card">
+  <main class="card" aria-label="Wedding Invitation Card">
+    <!-- Double frame -->
+    <span class="frame frame-outer" aria-hidden="true"></span>
+    <span class="frame frame-inner" aria-hidden="true"></span>
 
-  <p class="basmala">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+    <!-- Corner floral touches -->
+    <span class="floral floral-tr" aria-hidden="true"></span>
+    <span class="floral floral-bl" aria-hidden="true"></span>
 
-  <div class="ornament">✧ ✦ ✧</div>
+    <p class="basmala" id="basmala">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
 
-  <div class="title-block">
-    <div class="title-top">WEDDING</div>
-    <div class="title-main">INVITATION</div>
-  </div>
+    <div class="ornaments" aria-hidden="true">
+      <span>✧</span><span>✦</span><span>✧</span>
+    </div>
 
-  <div class="divider"></div>
+    <div class="title-block">
+      <div class="title-top" id="titleSmall">WEDDING</div>
+      <div class="title-main" id="titleBig">INVITATION</div>
+    </div>
 
-  <div class="ornament small">✧ ✦ ✧</div>
+    <div class="divider" aria-hidden="true"></div>
 
-  <div class="names">
-    MOAZ TALAAT <br>
-    & <br>
-    VJOLLCA ZENKO
-  </div>
+    <div class="ornaments small" aria-hidden="true">
+      <span>✧</span><span>✦</span><span>✧</span>
+    </div>
 
-  <div class="text">
-    WE ARE DELIGHTED TO INVITE YOU TO CELEBRATE OUR WEDDING
-  </div>
+    <h2 class="names" id="names">
+      MOAZ TALAAT <br><span class="amp">&amp;</span><br> VJOLLCA ZENKO
+    </h2>
 
-  <div class="details">
-    ON WEDNESDAY, 8TH OF APRIL 2026<br>
-    AT 8PM<br>
-    AT OCIEL HALL – AIN EL HAYAT RESORT, CAIRO
-  </div>
+    <p class="invite-text" id="text">
+      WE ARE DELIGHTED TO INVITE YOU TO CELEBRATE OUR WEDDING ON
+    </p>
 
-  <a class="location-btn" href="https://maps.google.com" target="_blank">
-    VIEW LOCATION
-  </a>
+    <div class="details" id="details">
+      <p class="detail-line" id="dateLine">ON WEDNESDAY, 8TH OF APRIL 2026</p>
+      <p class="detail-line" id="timeLine">AT 8 PM</p>
 
-</div>
+      <a class="location-link"
+         id="locationLink"
+         href="https://www.google.com/maps/search/?api=1&query=Ociel%20Hall%20Ain%20El%20Hayat%20Resort%20Cairo"
+         target="_blank" rel="noopener">
+        AT OCIEL HALL – AIN EL HAYAT RESORT, CAIRO
+      </a>
 
+      <a class="view-location" id="viewLocation"
+         href="https://www.google.com/maps/search/?api=1&query=Ociel%20Hall%20Ain%20El%20Hayat%20Resort%20Cairo"
+         target="_blank" rel="noopener">
+        VIEW LOCATION
+      </a>
+    </div>
+
+    <div id="countdown" class="countdown"></div>
+
+    <p class="footer" id="footer">YOUR PRESENCE WILL HONOR US</p>
+  </main>
+
+  <script src="script.js?v=2000"></script>
 </body>
 </html>
