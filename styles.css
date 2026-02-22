@@ -15,7 +15,9 @@ body{
   justify-content:center;
   padding:28px 14px;
 
-  background:var(--cream);
+  /* خلفية كريم */
+  background-color:var(--cream);
+
   font-family:"Cormorant Garamond", serif;
   text-transform:uppercase;
   color:#1f1f1f;
@@ -33,10 +35,17 @@ body{
   overflow:hidden;
 }
 
+/* خلي كل النص فوق الفريم والورد */
+.card *{
+  position:relative;
+  z-index:2;
+}
+
 /* Double Frame */
 .frame{
   position:absolute;
   pointer-events:none;
+  z-index:1;
   left:18px; right:18px; top:18px; bottom:18px;
   border-radius:calc(var(--radius) - 2px);
 }
@@ -49,9 +58,10 @@ body{
   border-radius:calc(var(--radius) - 10px);
 }
 
-/* Floral Roses Effect */
+/* Floral Roses */
 .floral{
   position:absolute;
+  z-index:0;
   width:340px;
   height:340px;
   pointer-events:none;
