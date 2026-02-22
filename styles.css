@@ -4,7 +4,10 @@ html { -webkit-text-size-adjust: 100%; }
 body{
   margin:0;
   font-family:'Cormorant Garamond', serif;
-  background:#f6efe4;
+
+  /* Creamy White background للصفحة كلها */
+  background:#f5efe6;
+
   min-height:100vh;
   display:flex;
   align-items:center;
@@ -13,25 +16,23 @@ body{
   text-transform:uppercase;
 }
 
-/* Card */
 .card{
   width:min(92vw, 520px);
   padding:64px 48px;
   border-radius:22px;
   text-align:center;
-  background:#ffffff;
+
+  /* نفس درجة الكريم داخل الدعوة */
+  background:#f5efe6;
 
   border:3px solid #5e3b8c;
   box-shadow:
-    0 0 0 12px #ffffff,
+    0 0 0 12px #f5efe6,
     0 0 0 13px rgba(94,59,140,0.35),
     0 22px 60px rgba(0,0,0,0.12);
-
-  /* مهم جدًا: ممنوع overflow hidden هنا */
-  overflow: visible;
 }
 
-/* Arabic line */
+/* Arabic */
 .basmala{
   font-size:16px;
   letter-spacing:3px;
@@ -49,38 +50,28 @@ body{
   opacity:0.9;
 }
 
-/* Title area */
+/* Title */
 .title-block{
-  padding: 0 26px; /* مسافة آمنة من الفريم */
+  padding: 0 24px;
 }
 
 .title-top{
   font-size:26px;
   letter-spacing:8px;
   color:#2f2f2f;
-  margin-top:6px;
 }
 
-/* INVITATION — مضبوط + من غير قص */
 .title-main{
   font-weight:500;
   color:#2f2f2f;
   line-height:1;
 
-  /* قوي بس يتكيف مع عرض الكارت */
-  font-size: clamp(40px, 6.2vw, 62px);
-
-  /* أقل عشان ما تمدّش الكلمة زيادة */
-  letter-spacing: clamp(1px, 0.35vw, 5px);
+  font-size: clamp(40px, 6vw, 62px);
+  letter-spacing: clamp(2px, 0.4vw, 6px);
 
   margin-top:-6px;
-
-  /* مهم: ممنوع القص */
-  white-space: nowrap;   /* تفضل سطر واحد */
-  overflow: visible;     /* ما تقصش آخر حرف */
 }
 
-/* Divider */
 .divider{
   width:70%;
   height:1px;
@@ -111,7 +102,6 @@ body{
   color:#333;
 }
 
-/* Location */
 .location-text{
   margin-top:30px;
   font-size:20px;
@@ -130,7 +120,6 @@ body{
   padding-bottom:3px;
 }
 
-/* Footer */
 .footer{
   margin-top:25px;
   font-size:16px;
@@ -141,18 +130,8 @@ body{
 /* Mobile */
 @media (max-width:480px){
   .card{ padding:55px 28px; }
-  .title-block{ padding:0 14px; }
-
-  .title-top{
-    font-size:22px;
-    letter-spacing:6px;
-  }
-
-  .title-main{
-    font-size: clamp(38px, 10vw, 54px);
-    letter-spacing: clamp(1px, 0.6vw, 4px);
-  }
-
+  .title-top{ font-size:22px; letter-spacing:6px; }
+  .title-main{ font-size: clamp(38px, 10vw, 54px); }
   .names{ font-size:22px; }
   #text{ font-size:16px; }
 }
