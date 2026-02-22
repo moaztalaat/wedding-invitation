@@ -13,10 +13,10 @@ body{
   text-transform:uppercase;
 }
 
+/* Card */
 .card{
-  width:90%;
-  max-width:500px;
-  padding:65px 50px;
+  width:min(92vw, 520px);
+  padding:64px 48px;
   border-radius:22px;
   text-align:center;
   background:#ffffff;
@@ -27,59 +27,66 @@ body{
     0 0 0 13px rgba(94,59,140,0.35),
     0 22px 60px rgba(0,0,0,0.12);
 
-  overflow:hidden; /* ضمان نهائي: أي حاجة ما تطلعش برا */
-}
-
-/* Ornament */
-.ornament{
-  font-size:20px;
-  letter-spacing: 4px;
-  color:#5e3b8c;
-  margin:10px 0;
-  opacity:0.85;
-}
-
-/* ===== TITLE (مضمون جوه الفريم) ===== */
-.title-block{
-  padding: 0 16px; /* مسافة من الجانبين علشان العنوان ما يقربش للفريم */
-}
-
-.title-top{
-  font-size:26px;
-  letter-spacing:8px;
-  margin-top:10px;
-  color:#2f2f2f;
-}
-
-/* clamp يخليها قوية وتفضل جوه الكارت على كل الشاشات */
-.title-main{
-  .title-main{
-  font-weight:500;
-  color:#2f2f2f;
-  line-height:1;
-
-  font-size: clamp(44px, 6.6vw, 64px);
-  letter-spacing: clamp(2px, 0.45vw, 6px);
-
-  margin-top:-6px;
-}
-}
-
-.divider{
-  width:70%;
-  height:1px;
-  background:#5e3b8c;
-  margin:22px auto;
-  opacity:0.6;
+  /* مهم جدًا: ممنوع overflow hidden هنا */
+  overflow: visible;
 }
 
 /* Arabic line */
 .basmala{
   font-size:16px;
   letter-spacing:3px;
-  margin-bottom:22px;
+  margin:0 0 18px;
   color:#5e3b8c;
   text-transform:none;
+}
+
+/* Ornament */
+.ornament{
+  font-size:20px;
+  letter-spacing:6px;
+  color:#5e3b8c;
+  margin:10px 0;
+  opacity:0.9;
+}
+
+/* Title area */
+.title-block{
+  padding: 0 26px; /* مسافة آمنة من الفريم */
+}
+
+.title-top{
+  font-size:26px;
+  letter-spacing:8px;
+  color:#2f2f2f;
+  margin-top:6px;
+}
+
+/* INVITATION — مضبوط + من غير قص */
+.title-main{
+  font-weight:500;
+  color:#2f2f2f;
+  line-height:1;
+
+  /* قوي بس يتكيف مع عرض الكارت */
+  font-size: clamp(40px, 6.2vw, 62px);
+
+  /* أقل عشان ما تمدّش الكلمة زيادة */
+  letter-spacing: clamp(1px, 0.35vw, 5px);
+
+  margin-top:-6px;
+
+  /* مهم: ممنوع القص */
+  white-space: nowrap;   /* تفضل سطر واحد */
+  overflow: visible;     /* ما تقصش آخر حرف */
+}
+
+/* Divider */
+.divider{
+  width:70%;
+  height:1px;
+  background:#5e3b8c;
+  margin:22px auto;
+  opacity:0.6;
 }
 
 .names{
@@ -104,6 +111,7 @@ body{
   color:#333;
 }
 
+/* Location */
 .location-text{
   margin-top:30px;
   font-size:20px;
@@ -122,6 +130,7 @@ body{
   padding-bottom:3px;
 }
 
+/* Footer */
 .footer{
   margin-top:25px;
   font-size:16px;
@@ -131,18 +140,17 @@ body{
 
 /* Mobile */
 @media (max-width:480px){
-  .card{
-    padding:55px 28px;
-  }
+  .card{ padding:55px 28px; }
+  .title-block{ padding:0 14px; }
 
   .title-top{
     font-size:22px;
     letter-spacing:6px;
   }
 
-  /* clamp هنا كفاية، بس بنقلل padding الجانبي شوية */
-  .title-block{
-    padding: 0 10px;
+  .title-main{
+    font-size: clamp(38px, 10vw, 54px);
+    letter-spacing: clamp(1px, 0.6vw, 4px);
   }
 
   .names{ font-size:22px; }
