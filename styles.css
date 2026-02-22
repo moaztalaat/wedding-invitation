@@ -1,5 +1,5 @@
 :root{
-  --cream:#f4efe6;
+  --cream:#f3eee4;
   --card:#fbfaf8;
   --purple:#5e3b8c;
   --radius:22px;
@@ -15,7 +15,6 @@ body{
   justify-content:center;
   padding:28px 14px;
 
-  /* خلفية كريم */
   background-color:var(--cream);
 
   font-family:"Cormorant Garamond", serif;
@@ -23,7 +22,6 @@ body{
   color:#1f1f1f;
 }
 
-/* Card */
 .card{
   position:relative;
   width:min(520px,92vw);
@@ -35,57 +33,42 @@ body{
   overflow:hidden;
 }
 
-/* خلي كل النص فوق الفريم والورد */
+/* Keep content above decorations */
 .card *{
   position:relative;
   z-index:2;
 }
 
-/* Double Frame */
+/* Double frame */
 .frame{
   position:absolute;
-  pointer-events:none;
   z-index:1;
   left:18px; right:18px; top:18px; bottom:18px;
   border-radius:calc(var(--radius) - 2px);
 }
-.frame-outer{
-  border:2px solid rgba(94,59,140,0.55);
-}
+.frame-outer{ border:2px solid rgba(94,59,140,0.55); }
 .frame-inner{
   left:28px; right:28px; top:28px; bottom:28px;
   border:1px solid rgba(94,59,140,0.35);
   border-radius:calc(var(--radius) - 10px);
 }
 
-/* Floral Roses */
+/* Soft floral */
 .floral{
   position:absolute;
   z-index:0;
-  width:340px;
-  height:340px;
+  width:320px;
+  height:320px;
   pointer-events:none;
-  opacity:0.85;
+  opacity:0.7;
 }
-
 .floral-tr{
-  top:-120px;
-  right:-120px;
-  background:
-    radial-gradient(circle at 40% 40%, rgba(155,100,255,0.28) 0 20%, transparent 21%),
-    radial-gradient(circle at 55% 30%, rgba(94,59,140,0.22) 0 18%, transparent 19%),
-    radial-gradient(circle at 60% 55%, rgba(155,100,255,0.20) 0 22%, transparent 23%),
-    radial-gradient(circle at 45% 60%, rgba(94,59,140,0.16) 0 24%, transparent 25%);
+  top:-100px; right:-100px;
+  background:radial-gradient(circle, rgba(155,100,255,0.2) 0%, transparent 60%);
 }
-
 .floral-bl{
-  bottom:-120px;
-  left:-120px;
-  background:
-    radial-gradient(circle at 60% 60%, rgba(155,100,255,0.28) 0 20%, transparent 21%),
-    radial-gradient(circle at 45% 75%, rgba(94,59,140,0.22) 0 18%, transparent 19%),
-    radial-gradient(circle at 35% 50%, rgba(155,100,255,0.20) 0 22%, transparent 23%),
-    radial-gradient(circle at 55% 40%, rgba(94,59,140,0.16) 0 24%, transparent 25%);
+  bottom:-100px; left:-100px;
+  background:radial-gradient(circle, rgba(155,100,255,0.2) 0%, transparent 60%);
 }
 
 .basmala{
@@ -141,20 +124,36 @@ body{
   letter-spacing:2px;
 }
 
-.location-link{
+/* Location inside same frame */
+.location-box{
   display:block;
   margin:14px auto 0;
-  padding:12px;
+  padding:12px 18px;
   border:1px solid rgba(94,59,140,0.35);
-  border-radius:12px;
+  border-radius:14px;
   color:var(--purple);
   text-decoration:none;
   font-family:"Cinzel", serif;
   font-weight:600;
+  transition:0.2s ease;
 }
 
+.location-box:hover{
+  background:rgba(94,59,140,0.05);
+}
+
+/* Countdown */
+.countdown{
+  margin-top:20px;
+  font-family:"Cinzel", serif;
+  font-weight:600;
+  color:var(--purple);
+  letter-spacing:2px;
+}
+
+/* Footer */
 .footer{
-  margin-top:22px;
+  margin-top:18px;
   font-family:"Cinzel", serif;
   letter-spacing:3px;
   font-size:14px;
